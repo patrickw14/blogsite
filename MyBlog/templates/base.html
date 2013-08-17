@@ -67,7 +67,7 @@
 
   {% block content %}
 
-  <!-- Here, we put everything in the body of the html (minus the stuf in the footer -->
+  <!-- Here, we put everything in the body of the html (minus the stuf in the footer) -->
   
   {% endblock %}
   
@@ -75,7 +75,11 @@
 
       <div class="footer">
         <div class="pull-left">&copy; Patrick Wilson 2012</div>
+	{% if user.is_authenticated %}
+	<div class="pull-right"><a href="/logout/">Admin log-out</a></div>
+	{% else %}
 	<div class="pull-right"><a href="/login/">Admin log-in</a></div>
+	{% endif %}
       </div>
       <br>
       <!-- this should only display when admin logged in -->
