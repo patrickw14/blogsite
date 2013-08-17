@@ -1,0 +1,5 @@
+MODULES_MANAGER_V2
+__init__|/home/patrick/Documents/blogsite/MyBlog/MyBlog/__init__.py
+settings|/home/patrick/Documents/blogsite/MyBlog/MyBlog/settings.py
+urls|/home/patrick/Documents/blogsite/MyBlog/MyBlog/urls.py
+wsgi|/home/patrick/Documents/blogsite/MyBlog/MyBlog/wsgi.py
