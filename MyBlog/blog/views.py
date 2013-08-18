@@ -127,7 +127,7 @@ def editpost(request, blog_id):
         blogPost.save()
         return HttpResponseRedirect('/')    
 
-    #if there were any errors,, then...
+    #if there were any errors, then...
     else:
         if not post:
             response_dict.update({'isErrorPost': True})
