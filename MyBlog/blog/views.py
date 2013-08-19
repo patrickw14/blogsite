@@ -81,6 +81,8 @@ def writeNewPost(request):
     dateEdited = datePosted
     title = request.POST.get('title', False)
 
+    post = parseLinks(post)
+
     response_dict.update({'post': post, 'author': author, 'title': title})
     #check for errors and bad input here...
     if post and author and title:
@@ -138,4 +140,11 @@ def editpost(request, blog_id):
 
     return render_to_response('templates/editpost.html', response_dict, 
                               context_instance=RequestContext(request))
-        
+   
+def parseLinks(post):
+    post = post.replace('&lt;', '<')
+    post = post.replace('&quot;', '"')
+    post = post.replace('&gt;', '"')
+
+    return post     
+
